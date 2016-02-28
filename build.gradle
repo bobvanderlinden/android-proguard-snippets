@@ -1,0 +1,29 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.5.0'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.3'
+    }
+}
+
+apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+
+group='com.github.bobvanderlinden'
+
+android {
+    buildToolsVersion = '23.0.2'
+    compileSdkVersion = 23
+
+    defaultConfig {
+        versionName "1"
+        versionCode Integer.parseInt(versionName)
+        minSdkVersion = 9
+
+        FileCollection proGuardFileCollection = files { file('./libraries').listFiles() }
+        consumerProguardFiles(proGuardFileCollection)
+    }
+}
