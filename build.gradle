@@ -9,23 +9,3 @@ buildscript {
         classpath 'com.jakewharton.sdkmanager:gradle-plugin:0.12.0'
     }
 }
-
-apply plugin: 'android-sdk-manager'
-apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
-
-group='com.github.bobvanderlinden'
-
-android {
-    buildToolsVersion = '23.0.2'
-    compileSdkVersion = 23
-
-    defaultConfig {
-        versionName "1.0"
-        versionCode 100
-        minSdkVersion = 9
-
-        FileCollection proGuardFileCollection = files { file('./libraries').listFiles() }
-        consumerProguardFiles(proGuardFileCollection)
-    }
-}
