@@ -19,8 +19,8 @@ android {
     compileSdkVersion = 23
 
     defaultConfig {
-        versionName "1"
-        versionCode Integer.parseInt(versionName)
+        versionName "1.0"
+        versionCode 100
         minSdkVersion = 9
 
         FileCollection proGuardFileCollection = files { file('./libraries').listFiles() }
