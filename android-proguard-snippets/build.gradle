@@ -2,7 +2,7 @@ apply plugin: 'android-sdk-manager'
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 
-group='com.github.krschultz'
+group='com.github.bobvanderlinden'
 
 android {
     buildToolsVersion '23'
